@@ -18,6 +18,7 @@ public class AdMobQtActivity extends org.qtproject.qt5.android.bindings.QtActivi
     private static ViewGroup viewGroup;
 
     private AdView mAdView;
+    private boolean adAdded = false;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,9 @@ public class AdMobQtActivity extends org.qtproject.qt5.android.bindings.QtActivi
 
             mAdView.setAdListener( new AdListener() {
                 public void onAdLoaded(){
+                    if( adAdded)
+                        return;
+                    adAdded = true;
                     viewGroup.addView( mAdView);
                 }
             });

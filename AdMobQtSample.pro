@@ -23,4 +23,5 @@ qtcAddDeployment()
 OTHER_FILES += \
     android/AndroidManifest.xml \
     android/project.properties \
-    android/src/org/qtproject/example/admobqt/AdMobQtActivity.java
+    android/src/org/qtproject/example/admobqt/AdMobQtActivity.java \
+    README.md
